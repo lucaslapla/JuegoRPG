@@ -17,4 +17,5 @@ export class persMarvel extends Atributos{
         this.poder = poder;
     }
 
+
 }

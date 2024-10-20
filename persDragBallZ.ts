@@ -1,22 +1,41 @@
 
 import {Atributos} from "./AtrubGral";
 
-export class persDragBallZ extends Atributos{
+export class persDragBallZ extends Atributos{ //Puede evolucionar a Super Saiyajin
 
-    private ki: number;
+    private superSaiyajin: boolean; 
 
-    constructor(dirImagen:string,nombre:string, golpeBasico:number, armadura:number, ki:number ){
+    constructor(dirImagen:string,nombre:string, golpeBasico:number, armadura:number, superSaiyajin:boolean ){
         super( dirImagen, nombre, golpeBasico, armadura);
-        this.ki=ki;
+        this.superSaiyajin=superSaiyajin;
     }
 
-    public getki() : number {
-        return this.ki
+    public getSuperSaiyajin() : boolean {
+        return this.superSaiyajin;
     }
 
-    public setki(ki : number) {
-        this.ki = ki;
+    public setSuperSaiyajin(superSaiyajin : boolean,personaje1:Atributos) {
+        this.superSaiyajin = superSaiyajin;
+        if (superSaiyajin){
+            this.modificarGolpeBasico(personaje1);
+            this.modificarArmadura(personaje1);
+        }
+    }
+  
+    public modificarGolpeBasico (personaje1:Atributos):void{
+        let aux =personaje1.getgolpeBasico();
+        aux= Math.round(aux*(1.15)); // aumenta el golpeBasico 15%
+        console.log("Aumenta Golpe Basico un 10 % ",aux);
+        personaje1.setgolpeBasico(aux);
+    }
+
+    public modificarArmadura (personaje1:Atributos):void{
+        let aux =personaje1.getarmadura();
+        aux= Math.round(aux*(1.15)); // aumenta la armadura 15%
+        console.log("Aumenta resistencia Armadura 10 % ",aux);
+        this.setarmadura(aux);
     }
     
+
 }
 

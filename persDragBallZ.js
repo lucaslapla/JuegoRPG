@@ -19,16 +19,32 @@ exports.persDragBallZ = void 0;
 var AtrubGral_1 = require("./AtrubGral");
 var persDragBallZ = /** @class */ (function (_super) {
     __extends(persDragBallZ, _super);
-    function persDragBallZ(dirImagen, nombre, golpeBasico, armadura, ki) {
+    function persDragBallZ(dirImagen, nombre, golpeBasico, armadura, superSaiyajin) {
         var _this = _super.call(this, dirImagen, nombre, golpeBasico, armadura) || this;
-        _this.ki = ki;
+        _this.superSaiyajin = superSaiyajin;
         return _this;
     }
-    persDragBallZ.prototype.getki = function () {
-        return this.ki;
+    persDragBallZ.prototype.getSuperSaiyajin = function () {
+        return this.superSaiyajin;
     };
-    persDragBallZ.prototype.setki = function (ki) {
-        this.ki = ki;
+    persDragBallZ.prototype.setSuperSaiyajin = function (superSaiyajin, personaje1) {
+        this.superSaiyajin = superSaiyajin;
+        if (superSaiyajin) {
+            this.modificarGolpeBasico(personaje1);
+            this.modificarArmadura(personaje1);
+        }
+    };
+    persDragBallZ.prototype.modificarGolpeBasico = function (personaje1) {
+        var aux = personaje1.getgolpeBasico();
+        aux = Math.round(aux * (1.15)); // aumenta el golpeBasico 15%
+        console.log("Aumenta Golpe Basico un 10 % ", aux);
+        personaje1.setgolpeBasico(aux);
+    };
+    persDragBallZ.prototype.modificarArmadura = function (personaje1) {
+        var aux = personaje1.getarmadura();
+        aux = Math.round(aux * (1.15)); // aumenta la armadura 15%
+        console.log("Aumenta resistencia Armadura 10 % ", aux);
+        this.setarmadura(aux);
     };
     return persDragBallZ;
 }(AtrubGral_1.Atributos));

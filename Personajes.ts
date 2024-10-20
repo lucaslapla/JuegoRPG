@@ -1,4 +1,6 @@
 import { Atributos } from "./AtrubGral";
+import { persDragBallZ } from "./persDragBallZ";
+import { persMarvel } from "./persMarvel";
 
 export class Personajes {
    private personajes : Atributos[];
@@ -24,10 +26,27 @@ export class Personajes {
       return this.personajes.map(personaje => personaje.getgolpeBasico());
    }
 
-   ataqueModicaArmadura(personaje1:Atributos, personaje2:Atributos): void {
+   ataqueModicaArmadura(personaje1:Atributos, personaje2:Atributos, round:number): void {
+      if (personaje1 instanceof persDragBallZ && round == 3){// se compara cada personaje, iterando en el main
+         console.log(personaje1.getnombre()+" se transfora en super Saiyajin ");
+         (personaje1 as persDragBallZ).setSuperSaiyajin(true,personaje1);
+      }
+      if (personaje1 instanceof persMarvel && round == 4){ //Round 4 usan poder especial.
+         let restaArmaduraPoder:number = personaje2.getarmadura()-personaje1.getpoder();
+        
+         if (personaje1.getnombre()=="IronMan" ){ // Ataque especial Marvel (complementoal basico)
+            console.log(" IronMan Ataca con Rayo Uni con un daño adicional de "+personaje1.getpoder()+" restando "+restaArmaduraPoder+ " Armadura");
+            personaje2.setarmadura(restaArmaduraPoder);
+         }else if (personaje1.getnombre()=="Hulk" ){
+            console.log(" Hulk Ataca con Furia con un daño de adicional de "+personaje1.getpoder()+" restando "+restaArmaduraPoder+ " Armadura");
+            personaje2.setarmadura(restaArmaduraPoder);
+         }else {
+            console.log(" Thor Ataca con Golpe de Trueno con un daño de adicional de "+personaje1.getpoder()+" restando "+restaArmaduraPoder+ " Armadura");
+            personaje2.setarmadura(restaArmaduraPoder);
+         }
+      }
       
       let restaArmadura:number = personaje2.getarmadura()-personaje1.getgolpeBasico();
-      
       personaje2.setarmadura(restaArmadura);
    }
   
@@ -43,4 +62,6 @@ export class Personajes {
    listargolpeBasico(): number[] {
       return this.personajes.map(personaje => personaje.getgolpeBasico());
    }
+
+   
 }

@@ -3,7 +3,7 @@
 export class Atributos{
     private dirImagen:string;
     private nombre:string;
-    private golpeBasico:number;
+    protected golpeBasico:number;
     private armadura:number;
 
     constructor (dirImagen:string,nombre:string, golpeBasico:number, armadura:number){
@@ -37,5 +37,6 @@ export class Atributos{
     public setarmadura(armadura : number) {
         this.armadura = armadura;
     }
+
     
 }
