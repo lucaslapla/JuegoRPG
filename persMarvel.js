@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.persMarvel = void 0;
-var AtrubGral_1 = require("./AtrubGral");
+var Atributos_1 = require("./Atributos");
 var persMarvel = /** @class */ (function (_super) {
     __extends(persMarvel, _super);
     function persMarvel(dirImagen, nombre, golpeBasico, armadura, poder) {
@@ -31,5 +31,5 @@ var persMarvel = /** @class */ (function (_super) {
         this.poder = poder;
     };
     return persMarvel;
-}(AtrubGral_1.Atributos));
+}(Atributos_1.Atributos));
 exports.persMarvel = persMarvel;

@@ -28,13 +28,13 @@ function combate (peleador1:number, peleador2:number){
             console.log(" ...Round "+round+" ... ");
             // ataca primero el Personaje1
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador1] , arrPersonajes.getpersonajes()[peleador2],round);
-            console.log(arrPersonajes.listarPersonajes()[peleador1]+" Da un Golape Basico de "+arrPersonajes.listargolpeBasico()[peleador1]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador2] +" a: "+arrPersonajes.listarArmadura()[peleador2]);
+            console.log(arrPersonajes.listarPersonajes()[peleador1]+" Da un Golpe Basico de "+arrPersonajes.listargolpeBasico()[peleador1]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador2] +" a: "+arrPersonajes.listarArmadura()[peleador2]);
             //Devuelve el ataque el Personaje2
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador2] , arrPersonajes.getpersonajes()[peleador1],round);
-            console.log(arrPersonajes.listarPersonajes()[peleador2]+" Da un Golape Basico de "+arrPersonajes.listargolpeBasico()[peleador2]+" Devilitando armadura de :"+arrPersonajes.listarPersonajes()[peleador1] +" a: "+arrPersonajes.listarArmadura()[peleador1]);
+            console.log(arrPersonajes.listarPersonajes()[peleador2]+" Da un Golpe Basico de "+arrPersonajes.listargolpeBasico()[peleador2]+" Devilitando armadura de :"+arrPersonajes.listarPersonajes()[peleador1] +" a: "+arrPersonajes.listarArmadura()[peleador1]);
             round++;
             if (round>3){ 
-                arrPersonajes.listargolpeBasico()[0]
+                arrPersonajes.listargolpeBasico()[0];
             }
         }
     }else{
@@ -43,10 +43,10 @@ function combate (peleador1:number, peleador2:number){
             console.log(" ...Round "+round+" ... ");
             // ataca primero el Personaje1
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador1] , arrPersonajes.getpersonajes()[peleador2],round);
-            console.log(arrPersonajes.listarPersonajes()[peleador1]+" Da un Golape Basico de "+arrPersonajes.listargolpeBasico()[peleador1]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador2] +" a: "+arrPersonajes.listarArmadura()[peleador2]);
+            console.log(arrPersonajes.listarPersonajes()[peleador1]+" Da un Golpe Basico de "+arrPersonajes.listargolpeBasico()[peleador1]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador2] +" a: "+arrPersonajes.listarArmadura()[peleador2]);
             //Devuelve el ataque el Personaje2
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador2] , arrPersonajes.getpersonajes()[peleador1],round);
-            console.log(arrPersonajes.listarPersonajes()[peleador2]+" Da un Golape Basico de "+arrPersonajes.listargolpeBasico()[peleador2]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador1] +" a: "+arrPersonajes.listarArmadura()[peleador1]);
+            console.log(arrPersonajes.listarPersonajes()[peleador2]+" Da un Golpe Basico de "+arrPersonajes.listargolpeBasico()[peleador2]+" Devilitando armadura de "+arrPersonajes.listarPersonajes()[peleador1] +" a: "+arrPersonajes.listarArmadura()[peleador1]);
             round++;  
         }
     }

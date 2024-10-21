@@ -1,4 +1,4 @@
-import { Atributos } from "./AtrubGral";
+import { Atributos } from "./Atributos";
 import { persDragBallZ } from "./persDragBallZ";
 import { persMarvel } from "./persMarvel";
 
@@ -29,7 +29,7 @@ export class Personajes {
    ataqueModicaArmadura(personaje1:Atributos, personaje2:Atributos, round:number): void {
       if (personaje1 instanceof persDragBallZ && round == 3){// se compara cada personaje, iterando en el main
          console.log(personaje1.getnombre()+" se transfora en super Saiyajin ");
-         (personaje1 as persDragBallZ).setSuperSaiyajin(true,personaje1);
+         personaje1.setEvoluciona(personaje1);
       }
       if (personaje1 instanceof persMarvel && round == 4){ //Round 4 usan poder especial.
          let restaArmaduraPoder:number = personaje2.getarmadura()-personaje1.getpoder();

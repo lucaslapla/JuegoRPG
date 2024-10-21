@@ -16,7 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.persDragBallZ = void 0;
-var AtrubGral_1 = require("./AtrubGral");
+var Atributos_1 = require("./Atributos");
 var persDragBallZ = /** @class */ (function (_super) {
     __extends(persDragBallZ, _super);
     function persDragBallZ(dirImagen, nombre, golpeBasico, armadura, superSaiyajin) {
@@ -26,6 +26,11 @@ var persDragBallZ = /** @class */ (function (_super) {
     }
     persDragBallZ.prototype.getSuperSaiyajin = function () {
         return this.superSaiyajin;
+    };
+    persDragBallZ.prototype.setEvoluciona = function (personaje1) {
+        var evolucion = true;
+        this.superSaiyajin = evolucion;
+        this.setSuperSaiyajin(evolucion, personaje1);
     };
     persDragBallZ.prototype.setSuperSaiyajin = function (superSaiyajin, personaje1) {
         this.superSaiyajin = superSaiyajin;
@@ -47,5 +52,5 @@ var persDragBallZ = /** @class */ (function (_super) {
         this.setarmadura(aux);
     };
     return persDragBallZ;
-}(AtrubGral_1.Atributos));
+}(Atributos_1.Atributos));
 exports.persDragBallZ = persDragBallZ;

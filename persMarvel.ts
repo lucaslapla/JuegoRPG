@@ -1,4 +1,4 @@
-import {Atributos} from "./AtrubGral";
+import {Atributos} from "./Atributos";
 
 export class persMarvel extends Atributos{
 

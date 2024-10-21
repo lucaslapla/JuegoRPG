@@ -10,9 +10,9 @@ var persMarvel_1 = require("./persMarvel");
 var goku = new persDragBallZ_1.persDragBallZ("./Goku", "Goku", 90, 540, false); // false superSaiyajin
 var vegueta = new persDragBallZ_1.persDragBallZ("./Vegueta", "Vegueta", 85, 550, false);
 var broly = new persDragBallZ_1.persDragBallZ("./Broly", "Broly", 100, 510, false);
-var ironMan = new persMarvel_1.persMarvel("./Ironman", "IronMan", 75, 600, 80);
-var hulk = new persMarvel_1.persMarvel("./Hulck", "Hulk", 95, 600, 100);
-var thor = new persMarvel_1.persMarvel("./Thor", "Thor", 90, 500, 100);
+var ironMan = new persMarvel_1.persMarvel("./Ironman", "IronMan", 75, 600, 20);
+var hulk = new persMarvel_1.persMarvel("./Hulck", "Hulk", 95, 600, 20);
+var thor = new persMarvel_1.persMarvel("./Thor", "Thor", 90, 500, 20);
 var arrPersonajes = new Personajes_1.Personajes([goku, vegueta, broly, ironMan, hulk, thor]);
 // Funcion para la lucha
 function combate(peleador1, peleador2) {
@@ -24,10 +24,10 @@ function combate(peleador1, peleador2) {
             console.log(" ...Round " + round + " ... ");
             // ataca primero el Personaje1
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador1], arrPersonajes.getpersonajes()[peleador2], round);
-            console.log(arrPersonajes.listarPersonajes()[peleador1] + " Da un Golape Basico de " + arrPersonajes.listargolpeBasico()[peleador1] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador2] + " a: " + arrPersonajes.listarArmadura()[peleador2]);
+            console.log(arrPersonajes.listarPersonajes()[peleador1] + " Da un Golpe Basico de " + arrPersonajes.listargolpeBasico()[peleador1] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador2] + " a: " + arrPersonajes.listarArmadura()[peleador2]);
             //Devuelve el ataque el Personaje2
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador2], arrPersonajes.getpersonajes()[peleador1], round);
-            console.log(arrPersonajes.listarPersonajes()[peleador2] + " Da un Golape Basico de " + arrPersonajes.listargolpeBasico()[peleador2] + " Devilitando armadura de :" + arrPersonajes.listarPersonajes()[peleador1] + " a: " + arrPersonajes.listarArmadura()[peleador1]);
+            console.log(arrPersonajes.listarPersonajes()[peleador2] + " Da un Golpe Basico de " + arrPersonajes.listargolpeBasico()[peleador2] + " Devilitando armadura de :" + arrPersonajes.listarPersonajes()[peleador1] + " a: " + arrPersonajes.listarArmadura()[peleador1]);
             round++;
             if (round > 3) {
                 arrPersonajes.listargolpeBasico()[0];
@@ -40,10 +40,10 @@ function combate(peleador1, peleador2) {
             console.log(" ...Round " + round + " ... ");
             // ataca primero el Personaje1
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador1], arrPersonajes.getpersonajes()[peleador2], round);
-            console.log(arrPersonajes.listarPersonajes()[peleador1] + " Da un Golape Basico de " + arrPersonajes.listargolpeBasico()[peleador1] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador2] + " a: " + arrPersonajes.listarArmadura()[peleador2]);
+            console.log(arrPersonajes.listarPersonajes()[peleador1] + " Da un Golpe Basico de " + arrPersonajes.listargolpeBasico()[peleador1] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador2] + " a: " + arrPersonajes.listarArmadura()[peleador2]);
             //Devuelve el ataque el Personaje2
             arrPersonajes.ataqueModicaArmadura(arrPersonajes.getpersonajes()[peleador2], arrPersonajes.getpersonajes()[peleador1], round);
-            console.log(arrPersonajes.listarPersonajes()[peleador2] + " Da un Golape Basico de " + arrPersonajes.listargolpeBasico()[peleador2] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador1] + " a: " + arrPersonajes.listarArmadura()[peleador1]);
+            console.log(arrPersonajes.listarPersonajes()[peleador2] + " Da un Golpe Basico de " + arrPersonajes.listargolpeBasico()[peleador2] + " Devilitando armadura de " + arrPersonajes.listarPersonajes()[peleador1] + " a: " + arrPersonajes.listarArmadura()[peleador1]);
             round++;
         }
     }

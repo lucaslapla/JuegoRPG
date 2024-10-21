@@ -1,5 +1,5 @@
 
-import {Atributos} from "./AtrubGral";
+import {Atributos} from "./Atributos"
 
 export class persDragBallZ extends Atributos{ //Puede evolucionar a Super Saiyajin
 
@@ -13,7 +13,14 @@ export class persDragBallZ extends Atributos{ //Puede evolucionar a Super Saiyaj
     public getSuperSaiyajin() : boolean {
         return this.superSaiyajin;
     }
-
+    
+    public setEvoluciona(personaje1:Atributos):void{
+        let evolucion: boolean=true;
+        this.superSaiyajin = evolucion;
+        this.setSuperSaiyajin(evolucion,personaje1);
+    }
+    
+       
     public setSuperSaiyajin(superSaiyajin : boolean,personaje1:Atributos) {
         this.superSaiyajin = superSaiyajin;
         if (superSaiyajin){
